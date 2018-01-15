@@ -2,6 +2,7 @@
 -------------------------------------------------------------------------------------
 https://www.bloc.io/ruby-warrior/#/warriors/328661/levels/6
 
+```ruby
 class Player
   def play_turn(warrior)
     if !warrior.feel(:backward).wall? && @direction != "right"
@@ -28,4 +29,5 @@ class Player
     end
   end
 end
+```
 -------------------------------------------------------------------------------------
