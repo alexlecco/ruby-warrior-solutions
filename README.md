@@ -31,3 +31,34 @@ class Player
 end
 ```
 -------------------------------------------------------------------------------------
+https://www.bloc.io/ruby-warrior/#/warriors/328661/levels/7
+
+```ruby
+class Player
+  def play_turn(warrior)
+    if warrior.feel.wall?
+      warrior.pivot!
+    else
+      if warrior.feel.enemy?
+        warrior.attack!
+      else
+        if @health > warrior.health && @health < 5
+          warrior.walk!(:backward)
+        else
+          if @health != 20
+            warrior.rest!
+          else
+            warrior.walk!
+          end
+        end
+      end
+    end
+    @health = warrior.health
+  end
+end
+```
+-------------------------------------------------------------------------------------
+https://www.bloc.io/ruby-warrior/#/warriors/328661/levels/8
+
+```ruby
+```
