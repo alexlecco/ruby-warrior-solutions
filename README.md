@@ -108,7 +108,40 @@ end
 
 # ruby-warrior-solutions intemediate
 
-https://www.bloc.io/ruby-warrior/#/warriors/328661/levels/1
+https://www.bloc.io/ruby-warrior/#/warriors/252430/levels/1
+
+```ruby
+class Player
+  def play_turn(warrior)
+    warrior.walk!(warrior.direction_of_stairs)
+  end
+end
+```
+-------------------------------------------------------------------------------------
+
+https://www.bloc.io/ruby-warrior/#/warriors/252430/levels/2
 
 ```ruby
 ```
+-------------------------------------------------------------------------------------
+
+
+https://www.bloc.io/ruby-warrior/#/warriors/252430/levels/3
+
+```ruby
+```
+-------------------------------------------------------------------------------------
+
+
+https://www.bloc.io/ruby-warrior/#/warriors/252430/levels/4
+
+```ruby
+```
+-------------------------------------------------------------------------------------
+
+
+https://www.bloc.io/ruby-warrior/#/warriors/252430/levels/5
+
+```ruby
+```
+-------------------------------------------------------------------------------------
