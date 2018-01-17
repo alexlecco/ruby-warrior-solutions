@@ -1,4 +1,4 @@
-# ruby-warrior-solutions
+# ruby-warrior-solutions beginner
 -------------------------------------------------------------------------------------
 https://www.bloc.io/ruby-warrior/#/warriors/328661/levels/6
 
@@ -78,5 +78,37 @@ end
 https://www.bloc.io/ruby-warrior/#/warriors/328661/levels/9
 
 ```ruby
+class Player
+  def play_turn(warrior)
+    
+    if warrior.look(:backward)[2].enemy?
+      if warrior.look[2].captive?
+        if warrior.look[1].enemy?
+          warrior.shoot!
+        else
+          warrior.walk!
+        end
+      else
+        warrior.pivot!
+      end
+    else
+      if warrior.feel.captive?
+        warrior.rescue!
+      else
+        warrior.walk!
+      end
+    end
+    
+  end
+end
+```
+-------------------------------------------------------------------------------------
+-------------------------------------------------------------------------------------
+-------------------------------------------------------------------------------------
 
+# ruby-warrior-solutions intemediate
+
+https://www.bloc.io/ruby-warrior/#/warriors/328661/levels/1
+
+```ruby
 ```
