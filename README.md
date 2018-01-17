@@ -122,6 +122,15 @@ end
 https://www.bloc.io/ruby-warrior/#/warriors/252430/levels/2
 
 ```ruby
+class Player
+  def play_turn(warrior)
+    if warrior.feel(warrior.direction_of_stairs).enemy?
+      warrior.attack!(warrior.direction_of_stairs)
+    else
+      warrior.walk!(warrior.direction_of_stairs)
+    end
+  end
+end
 ```
 -------------------------------------------------------------------------------------
 
