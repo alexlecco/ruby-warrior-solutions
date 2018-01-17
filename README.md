@@ -61,4 +61,22 @@ end
 https://www.bloc.io/ruby-warrior/#/warriors/328661/levels/8
 
 ```ruby
+class Player
+  def play_turn(warrior)
+    #warrior.feel(:backward).wall? ? warrior.walk! : warrior.shoot!
+    if !warrior.look[2].empty? && !warrior.look[2].wall?
+      warrior.shoot!
+    else
+      warrior.walk!
+    end
+  end
+end
+```
+
+
+-------------------------------------------------------------------------------------
+https://www.bloc.io/ruby-warrior/#/warriors/328661/levels/9
+
+```ruby
+
 ```
