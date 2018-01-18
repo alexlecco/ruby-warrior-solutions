@@ -162,6 +162,40 @@ end
 https://www.bloc.io/ruby-warrior/#/warriors/252430/levels/4
 
 ```ruby
+class Player
+  def play_turn(warrior)
+    
+    if warrior.listen == []
+      warrior.walk!(warrior.direction_of_stairs)
+    else
+      if warrior.listen[0].captive?
+        if !warrior.feel(:backward).wall?
+          warrior.walk!(:backward)
+        else
+          if warrior.feel(:right).empty?
+            warrior.rescue!(:left)
+          else
+            warrior.rescue!(:right)
+          end
+        end
+      else
+        if warrior.feel(warrior.direction_of(warrior.listen[0])).empty?
+          if warrior.health == 20
+            warrior.walk!(warrior.direction_of(warrior.listen[0]))
+          else
+            warrior.rest!
+          end
+        else
+          if warrior.health > 10
+            warrior.attack!(warrior.direction_of(warrior.listen[0]))
+          else
+            warrior.walk!(:left)
+          end
+        end
+      end
+    end
+
+  end
 ```
 -------------------------------------------------------------------------------------
 
