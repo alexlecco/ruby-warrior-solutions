@@ -138,6 +138,23 @@ end
 https://www.bloc.io/ruby-warrior/#/warriors/252430/levels/3
 
 ```ruby
+class Player
+  def play_turn(warrior)
+    if warrior.feel(:forward).enemy?
+      warrior.bind!(:forward)
+    else
+      if warrior.feel(:backward).enemy?
+        warrior.bind!(:backward)
+      else
+        if warrior.feel(warrior.direction_of_stairs).empty?
+          warrior.walk!(warrior.direction_of_stairs)
+        else
+          warrior.attack!(warrior.direction_of_stairs)
+        end
+      end
+    end
+  end
+end
 ```
 -------------------------------------------------------------------------------------
 
